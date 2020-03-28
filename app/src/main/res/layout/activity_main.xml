@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/documentIDET"
+        android:hint="Enter document ID"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:maxLines="1"
+        android:maxLength="20"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/studentNameET"
+        android:layout_below="@id/documentIDET"
+        android:hint="Enter Student Name"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:maxLines="1"
+        android:maxLength="20"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/studentCityET"
+        android:hint="Enter Student City"
+        android:layout_below="@id/studentNameET"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:maxLines="1"
+        android:maxLength="20"
+        />
+    <Button
+        android:layout_below="@id/studentCityET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD VALUES"
+        android:id="@+id/addValuesBtn"
+        android:onClick="addValuesToFirebaseFirestore"
+        />
+
+    <Button
+        android:id="@+id/getValuesBtn"
+        android:layout_below="@id/addValuesBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GET VALUES VALUES"
+        android:onClick="getDataFromFirebaseFirestore"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/downloadedDataTV"
+        android:layout_below="@id/getValuesBtn"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <Button
+        android:id="@+id/updateValuesBtn"
+        android:layout_below="@id/downloadedDataTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update values"
+        android:onClick="updateValuesOfDocumentField"
+        />
+
+    <Button
+        android:id="@+id/deleteValuesBtn"
+        android:layout_below="@id/updateValuesBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete values"
+        android:onClick="deleteFieldValue"
+        />
+
+</RelativeLayout>

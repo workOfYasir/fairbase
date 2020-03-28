@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "433190708633",
+    "firebase_url": "https://fairbase-e5703.firebaseio.com",
+    "project_id": "fairbase-e5703",
+    "storage_bucket": "fairbase-e5703.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433190708633:android:4754c08abf788807769f08",
+        "android_client_info": {
+          "package_name": "com.hybird.fairbase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433190708633-pvf5feahahvhqibh7ei2qdh8o3010r5h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hybird.fairbase",
+            "certificate_hash": "b75567b3a86e08defc2315652e56ce5fe452abea"
+          }
+        },
+        {
+          "client_id": "433190708633-1gjtn3g833oksn9ilml1oelg3j60f7do.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4qPaDPK_6kZDSyAYe1aexexgygJGgh9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433190708633-1gjtn3g833oksn9ilml1oelg3j60f7do.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
