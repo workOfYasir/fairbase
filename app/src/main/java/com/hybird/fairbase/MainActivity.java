@@ -24,8 +24,8 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseFirestore objectFirebaseFirestore;
-    private static final String COLLECTION_NAME="BSCSClassInformation";
-
+    private static final String COLLECTION_NAME="BSCS_5B";
+    private static final String COLLECTION_NAME1="student";
     private Dialog objectDialog;
     private EditText documentIDET,studentNameET,studentCityET;
 
@@ -252,7 +252,35 @@ public class MainActivity extends AppCompatActivity {
                     e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
+    public void deletecollection(View view)
+    {
+        try
+        {
+            objectFirebaseFirestore.collection("student").document("class")
+                    .delete()
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            objectDialog.dismiss();
+                            Toast.makeText(MainActivity.this, "Value Deleted Successfully", Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            objectDialog.dismiss();
+                            Toast.makeText(MainActivity.this, "Fails to delete values :" + e.getMessage(), Toast.LENGTH_SHORT).show();
 
+                        }
+                    });
+        }
+        catch (Exception e)
+        {
+            objectDialog.dismiss();
+            Toast.makeText(this, "deletecollection:"+
+                    e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
 
 }
 

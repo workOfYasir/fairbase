@@ -82,5 +82,13 @@
         android:text="Delete values"
         android:onClick="deleteFieldValue"
         />
+    <Button
+        android:id="@+id/deleteCollectionBtn"
+        android:layout_below="@id/deleteValuesBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Collection"
+        android:onClick="deletecollection"
+        />
 
 </RelativeLayout>
